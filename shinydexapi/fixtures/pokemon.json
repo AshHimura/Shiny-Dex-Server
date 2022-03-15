@@ -4,14 +4,18 @@
         "pk": 1,
         "fields": {
             "name": "Rowlet",
-            "pokemonKind": "Grass Quill Pokemon",
+            "pokemon_kind": "Grass Quill Pokemon",
             "description": "Flies noiselessly on delicate wings. It has mastered the art of deftly launching dagger-sharp feathers from those same wings.",
-            "standardHeight": "1'00",
-            "standardAlphaHeight": "2'11",
-            "standardWeight": "3.3",
-            "standardAlphaWeight": "11.9",
-            "isShiny": true,
-            "isAlpha": true
+            "standard_height": "1'00",
+            "standard_alpha_height": "2'11",
+            "standard_weight": "3.3",
+            "standard_alpha_weight": "11.9",
+            "is_shiny": true,
+            "is_alpha": true,
+            "home_regions": [1],
+            "poke_types": [1,2],
+            "poke_items": [1,2]
+
         }
     }
 ]

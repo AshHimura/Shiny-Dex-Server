@@ -3,14 +3,126 @@
         "model": "shinydexapi.type",
         "pk": 1,
         "fields": {
-            "name": "Grass"
+            "type": "Grass"
         }
     },
     {
         "model": "shinydexapi.type",
         "pk": 2,
         "fields": {
-            "name": "Flying"
+            "type": "Flying"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 3,
+        "fields": {
+            "type": "Normal"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 4,
+        "fields": {
+            "type": "Fire"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 5,
+        "fields": {
+            "type": "Water"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 6,
+        "fields": {
+            "type": "Electric"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 7,
+        "fields": {
+            "type": "Ice"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 8,
+        "fields": {
+            "type": "Fighting"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 9,
+        "fields": {
+            "type": "Poison"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 10,
+        "fields": {
+            "type": "Ground"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 11,
+        "fields": {
+            "type": "Psychic"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 12,
+        "fields": {
+            "type": "Bug"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 13,
+        "fields": {
+            "type": "Rock"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 14,
+        "fields": {
+            "type": "Ghost"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 15,
+        "fields": {
+            "type": "Dark"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 16,
+        "fields": {
+            "type": "Dragon"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 17,
+        "fields": {
+            "type": "Steel"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 18,
+        "fields": {
+            "type": "Fairy"
         }
     }
 ]

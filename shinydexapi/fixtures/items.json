@@ -5,5 +5,12 @@
         "fields": {
             "name": "Spoiled Apricorn"
         }
+    },
+    {
+        "model": "shinydexapi.item",
+        "pk": 2,
+        "fields": {
+            "name": "Oran Berry"
+        }
     }
 ]

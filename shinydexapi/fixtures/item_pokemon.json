@@ -1,6 +1,6 @@
 [
     {
-        "model": "shinydexapi.itempokemon",
+        "model": "shinydexapi.item                                                                                                                                            pokemon",
         "pk": 1,
         "fields": {
             "pokemon_id": 1,
