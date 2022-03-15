@@ -1,0 +1,10 @@
+[
+    {
+        "model": "shinydexapi.favorite",
+        "pk": 1,
+        "fields": {
+            "pokemon_id": 1,
+            "user_id": 1
+        }
+    }
+]

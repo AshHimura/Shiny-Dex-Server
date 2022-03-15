@@ -1,0 +1,10 @@
+[
+    {
+        "model": "shinydexapi.itempokemon",
+        "pk": 1,
+        "fields": {
+            "pokemon_id": 1,
+            "item_id": 1
+        }
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "model": "shinydexapi.item",
+        "pk": 1,
+        "fields": {
+            "name": "Spoiled Apricorn"
+        }
+    }
+]

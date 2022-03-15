@@ -1,0 +1,13 @@
+[
+    {
+        "model": "shinydexapi.post",
+        "pk": 1,
+        "fields": {
+            "title": "Test",
+            "publication_date": "2022-03-14",
+            "image_url": null,
+            "content": "This is a test of the posting capabilities. #YOLO",
+            "user_id": 1
+        }
+    }
+]

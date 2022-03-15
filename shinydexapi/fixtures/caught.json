@@ -1,0 +1,12 @@
+[
+    {
+        "model": "shinydexapi.caught",
+        "pk": 1,
+        "fields": {
+            "pokemon_id": 1,
+            "user_id": 1,
+            "isShiny": true,
+            "isAlpha": false
+        }
+    }
+]

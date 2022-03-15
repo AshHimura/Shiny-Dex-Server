@@ -8,4 +8,4 @@ from .region import Region
 from .regionpokemon import RegionPokemon
 from .type import Type
 from .typepokemon import TypePokemon
-from .user import DexUser
+from .dexuser import DexUser

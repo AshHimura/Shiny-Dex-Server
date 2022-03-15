@@ -1,0 +1,16 @@
+[
+    {
+        "model": "shinydexapi.type",
+        "pk": 1,
+        "fields": {
+            "name": "Grass"
+        }
+    },
+    {
+        "model": "shinydexapi.type",
+        "pk": 2,
+        "fields": {
+            "name": "Flying"
+        }
+    }
+]

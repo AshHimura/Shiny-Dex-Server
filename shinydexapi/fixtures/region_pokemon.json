@@ -1,0 +1,10 @@
+[
+    {
+        "model": "shinydexapi.regionpokemon",
+        "pk": 1,
+        "fields": {
+            "pokemon_id": 1,
+            "region_id": 1
+        }
+    }
+]

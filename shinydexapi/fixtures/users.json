@@ -1,0 +1,20 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "Gundam_Deathscythe",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "DMaxwell",
+            "first_name": "Duo",
+            "last_name": "Maxwell",
+            "email": "God_Of_Death@gundam.net",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-03-12T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "model": "shinydexapi.typepokemon",
+        "pk": 1,
+        "fields": {
+            "pokemon_id": 1,
+            "type_id": 1
+        }
+    },
+    {
+        "model": "shinydexapi.typepokemon",
+        "pk": 1,
+        "fields": {
+            "pokemon_id": 1,
+            "type_id": 2
+        }
+    }
+]

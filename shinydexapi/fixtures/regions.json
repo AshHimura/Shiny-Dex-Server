@@ -1,0 +1,9 @@
+[
+    {
+        "model": "shinydexapi.region",
+        "pk": 1,
+        "fields": {
+            "name": "Coronet Highlands"
+        }
+    }
+]

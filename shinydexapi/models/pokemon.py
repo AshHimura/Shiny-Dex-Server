@@ -10,4 +10,6 @@ class Pokemon(models.Model):
     standardAlphaWeight = models.FloatField()
     isShiny = models.BooleanField(default=False)
     isAlpha = models.BooleanField(default=False)
-    
+    home_regions = models.ManyToManyField("Region", through="regionpokemon")
+    poke_types = models.ManyToManyField("Type", through="typepokemon")
+    poke_items = models.ManyToManyField("Item", through="")

@@ -1,0 +1,11 @@
+[
+    {
+        "model": "shinydexapi.dexuser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "Just your normal gundam pilot, nothing to see here...",
+            "created_on": "2022-03-12"
+        }
+    }
+]
