@@ -50,7 +50,8 @@ def register_user(request):
         username=request.data['username'],
         password=request.data['password'],
         first_name=request.data['first_name'],
-        last_name=request.data['last_name']
+        last_name=request.data['last_name'],
+        email=request.data['email']
     )
 
     # Now save the extra info in the shinydexapi_dexuser table
@@ -63,4 +64,4 @@ def register_user(request):
     token = Token.objects.create(user=dexuser.user)
     # Return the token to the client
     data = { 'token': token.key }
-    return Response(data)
+    return Response(data, status=201)

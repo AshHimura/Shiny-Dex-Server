@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
+from rest_framework import routers
 from shinydexapi.views import register_user, login_user
 from shinydexapi.views import PokemonView
-from rest_framework import routers
 
 router = routers.DefaultRouter(trailing_slash=False)
 
@@ -31,4 +33,4 @@ urlpatterns = [
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
