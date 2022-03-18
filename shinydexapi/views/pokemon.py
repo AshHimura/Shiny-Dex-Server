@@ -1,17 +1,19 @@
 """View module for handling requests about pokemon"""
 from django.http import HttpResponseServerError
+from rest_framework.decorators import action
+import json
 from django.core.exceptions import ValidationError
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from shinydexapi.models import Pokemon, DexUser
+from shinydexapi.models import Pokemon, RegionPokemon, PokeType, Region, Item
 
 
 class PokemonView(ViewSet):
     """ShinyDex pokemon view"""
-    
-    permission_classes = [ DjangoModelPermissions ]
+
+    permission_classes = [DjangoModelPermissions]
     queryset = Pokemon.objects.none()
 
     def retrieve(self, request, pk):
@@ -37,17 +39,45 @@ class PokemonView(ViewSet):
         serializer = PokemonSerializer(pokemon, many=True)
         return Response(serializer.data)
 
+    @action(methods=["get"], detail=True)
+    def getregions(self, request, pk):
+        """Handle GET requests to get all pokemon by region
+
+        Returns:
+            Response: JSON serialized list of pokemon according to region id
+        """
+        #Create var to filter regions by id
+        regionpoke = RegionPokemon.objects.filter(region_id=pk)
+        #set pokemon object to empty list
+        pokemon = []
+        
+        #for loop creates a variable to contain pokemon instance found by id, then append to empty list
+        for poke in regionpoke:
+            pika = Pokemon.objects.get(pk=poke.pokemon.id)
+            pokemon.append(pika)
+        serializer = PokemonSerializer(pokemon, many=True)
+        return Response(serializer.data)
+
     def create(self, request):
         """Handle POST operations
 
         Returns:
             Response -- JSON serialized game instance
         """
-        user = DexUser.objects.get(user=request.auth.user)
+        #Many-to-Many fields require an empty list in create
+        home_regions = []
+        for region in request.data['home_regions']:
+            home_regions.append(Region.objects.get(pk=region))
+        poke_types = []
+        for poketype in request.data['poke_types']:
+            poke_types.append(PokeType.objects.get(pk=poketype))
+        poke_items = []
+        for item in request.data['poke_items']:
+            poke_items.append(Item.objects.get(pk=item))
         try:
             serializer = CreatePokemonSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
-            serializer.save(user=user)
+            serializer.save(home_regions=home_regions, poke_types=poke_types, poke_items=poke_items)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except ValidationError as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_400_BAD_REQUEST)
@@ -80,14 +110,13 @@ class PokemonSerializer(serializers.ModelSerializer):
         model = Pokemon
         fields = ('id', 'name', 'pokemon_kind', 'description',
                   'standard_height', 'standard_alpha_height', 'standard_weight',
-                   'standard_alpha_weight', 'is_shiny', 'is_alpha', 'home_regions', 'poke_types', 'poke_items')
+                  'standard_alpha_weight', 'is_shiny', 'is_alpha', 'home_regions', 'poke_types', 'poke_items')
         depth = 1
-        
+
 
 class CreatePokemonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pokemon
         fields = ['id', 'name', 'pokemon_kind', 'description',
                   'standard_height', 'standard_alpha_height', 'standard_weight',
-                   'standard_alpha_weight', 'is_shiny', 'is_alpha']
-        
+                  'standard_alpha_weight', 'is_shiny', 'is_alpha']

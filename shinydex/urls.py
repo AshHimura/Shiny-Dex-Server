@@ -20,11 +20,14 @@ from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework import routers
 from shinydexapi.views import register_user, login_user
-from shinydexapi.views import PokemonView
+from shinydexapi.views import PokemonView, RegionView, ItemView, PokeTypeView
 
 router = routers.DefaultRouter(trailing_slash=False)
 
 router.register(r'pokemon', PokemonView, 'pokemon')
+router.register(r'regions', RegionView, 'region')
+router.register(r'items', ItemView, 'item')
+router.register(r'poketypes', PokeTypeView, 'poketype')
 
 
 urlpatterns = [

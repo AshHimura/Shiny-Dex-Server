@@ -6,6 +6,6 @@ from .pokemon import Pokemon
 from .post import Post
 from .region import Region
 from .region_pokemon import RegionPokemon
-from .type import Type
+from .poketype import PokeType
 from .type_pokemon import TypePokemon
-from .dexuser import DexUser
+from .user import DexUser

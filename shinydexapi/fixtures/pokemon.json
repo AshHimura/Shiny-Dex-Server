@@ -10,12 +10,29 @@
             "standard_alpha_height": "2'11",
             "standard_weight": "3.3",
             "standard_alpha_weight": "11.9",
-            "is_shiny": true,
+            "is_shiny": false,
             "is_alpha": true,
             "home_regions": [1],
             "poke_types": [1,2],
             "poke_items": [1,2]
-
+        }
+    },
+    {
+        "model": "shinydexapi.pokemon",
+        "pk": 4,
+        "fields": {
+        "name": "Cyndaquil",
+        "pokemon_kind": "Fire Mouse Pokemon",
+        "description": "Hails from the Johto region. Though usually curled into a ball due to its timid disposition, it harbors tremendous firepower.",
+        "standard_height": "1'08",
+        "standard_alpha_height": "3'07",
+        "standard_weight": 17.4,
+        "standard_alpha_weight": 46.0,
+        "is_shiny": false,
+        "is_alpha": true,
+        "home_regions": [3],
+        "poke_types": [4],
+        "poke_items": [1,2]
         }
     }
 ]

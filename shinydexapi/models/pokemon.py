@@ -11,6 +11,6 @@ class Pokemon(models.Model):
     is_shiny = models.BooleanField(default=False)
     is_alpha = models.BooleanField(default=False)
     home_regions = models.ManyToManyField("Region", through="RegionPokemon")
-    poke_types = models.ManyToManyField("Type", through="TypePokemon")
+    poke_types = models.ManyToManyField("PokeType", through="TypePokemon")
     poke_items = models.ManyToManyField("Item", through="ItemPokemon")
     

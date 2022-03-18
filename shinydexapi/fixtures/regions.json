@@ -5,5 +5,33 @@
         "fields": {
             "name": "Coronet Highlands"
         }
+    },
+    {
+        "model": "shinydexapi.region",
+        "pk": 2,
+        "fields": {
+            "name": "Obsidian Fieldlands"
+        }
+    },
+    {
+        "model": "shinydexapi.region",
+        "pk": 3,
+        "fields": {
+            "name": "Crimson Mirelands"
+        }
+    },
+    {
+        "model": "shinydexapi.region",
+        "pk": 4,
+        "fields": {
+            "name": "Cobalt Coastlands"
+        }
+    },
+    {
+        "model": "shinydexapi.region",
+        "pk": 5,
+        "fields": {
+            "name": "Alabaster Icelands"
+        }
     }
 ]

@@ -55,13 +55,13 @@ def register_user(request):
     )
 
     # Now save the extra info in the shinydexapi_dexuser table
-    dexuser = DexUser.objects.create(
+    dex_user = DexUser.objects.create(
         bio=request.data['bio'],
         user=new_user
     )
 
     # Use the REST Framework's token generator on the new user account
-    token = Token.objects.create(user=dexuser.user)
+    token = Token.objects.create(user=dex_user.user)
     # Return the token to the client
     data = { 'token': token.key }
     return Response(data, status=201)

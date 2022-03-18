@@ -1,0 +1,128 @@
+[
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 1,
+        "fields": {
+            "poketype": "Grass"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 2,
+        "fields": {
+            "poketype": "Flying"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 3,
+        "fields": {
+            "poketype": "Normal"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 4,
+        "fields": {
+            "poketype": "Fire"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 5,
+        "fields": {
+            "poketype": "Water"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 6,
+        "fields": {
+            "poketype": "Electric"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 7,
+        "fields": {
+            "poketype": "Ice"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 8,
+        "fields": {
+            "poketype": "Fighting"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 9,
+        "fields": {
+            "poketype": "Poison"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 10,
+        "fields": {
+            "poketype": "Ground"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 11,
+        "fields": {
+            "poketype": "Psychic"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 12,
+        "fields": {
+            "poketype": "Bug"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 13,
+        "fields": {
+            "poketype": "Rock"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 14,
+        "fields": {
+            "poketype": "Ghost"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 15,
+        "fields": {
+            "poketype": "Dark"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 16,
+        "fields": {
+            "poketype": "Dragon"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 17,
+        "fields": {
+            "poketype": "Steel"
+        }
+    },
+    {
+        "model": "shinydexapi.poketype",
+        "pk": 18,
+        "fields": {
+            "poketype": "Fairy"
+        }
+    }
+]
