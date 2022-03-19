@@ -1,7 +1,6 @@
 """View module for handling requests about game"""
 import base64
 import uuid
-from django.http import HttpResponseServerError
 from django.core.exceptions import ValidationError
 from django.core.files.base import ContentFile
 from rest_framework.viewsets import ViewSet

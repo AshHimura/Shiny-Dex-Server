@@ -20,13 +20,15 @@ from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework import routers
 from shinydexapi.views import register_user, login_user
-from shinydexapi.views import PokemonView, RegionView, ItemView, PokeTypeView
+from shinydexapi.views import PokemonView, RegionView, ItemView, PokeTypeView, PostView, DexUserView
 
 router = routers.DefaultRouter(trailing_slash=False)
 
 router.register(r'pokemon', PokemonView, 'pokemon')
 router.register(r'regions', RegionView, 'region')
 router.register(r'items', ItemView, 'item')
+router.register(r'socials', PostView, 'social')
+router.register(r'users', DexUserView, 'user')
 router.register(r'poketypes', PokeTypeView, 'poketype')
 
 

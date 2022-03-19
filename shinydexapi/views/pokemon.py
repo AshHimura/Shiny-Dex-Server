@@ -88,11 +88,20 @@ class PokemonView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
+        home_regions = []
+        for region in request.data['home_regions']:
+            home_regions.append(Region.objects.get(pk=region))
+        poke_types = []
+        for poketype in request.data['poke_types']:
+            poke_types.append(PokeType.objects.get(pk=poketype))
+        poke_items = []
+        for item in request.data['poke_items']:
+            poke_items.append(Item.objects.get(pk=item))
         try:
             pokemon = Pokemon.objects.get(pk=pk)
             serializer = CreatePokemonSerializer(pokemon, data=request.data)
             serializer.is_valid(raise_exception=True)
-            serializer.save()
+            serializer.save(home_regions=home_regions, poke_types=poke_types, poke_items=poke_items)
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except ValidationError as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_400_BAD_REQUEST)
