@@ -86,4 +86,4 @@ class CaughtSerializer(serializers.ModelSerializer):
 class CreateCaughtSerializer(serializers.ModelSerializer):
     class Meta:
         model = Caught
-        fields = ['id', 'is_shiny', 'is_alpha']
+        fields = ['id', 'user', 'pokemon', 'is_shiny', 'is_alpha']
