@@ -1,7 +1,6 @@
 """View module for handling requests about pokemon"""
 from django.http import HttpResponseServerError
 from rest_framework.decorators import action
-import json
 from django.core.exceptions import ValidationError
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import ViewSet
@@ -28,7 +27,7 @@ class PokemonView(ViewSet):
             return Response(serializer.data)
         except Pokemon.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
+        
     def list(self, request):
         """Handle GET requests to get all game types
 

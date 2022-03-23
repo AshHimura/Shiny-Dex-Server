@@ -1,7 +1,8 @@
 from django.db import models
 
 class Pokemon(models.Model):
-    name = models.CharField(max_length=20)
+    # id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=50)
     pokemon_kind = models.CharField(max_length=40)
     description = models.TextField()
     standard_height = models.CharField(max_length=10)

@@ -6,4 +6,5 @@ from .item import ItemView
 from .post import PostView
 from .user import DexUserView
 from .poketype import PokeTypeView
+from .caught import CaughtView
 
