@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from shinydexapi.models import Caught, Pokemon, DexUser
 
+
 class CaughtView(ViewSet):
     """ShinyDex caught view"""
 
@@ -27,7 +28,7 @@ class CaughtView(ViewSet):
             return Response(serializer.data)
         except Caught.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
+
     def list(self, request):
         """Handle GET requests to get all caught pokemon
 
@@ -44,7 +45,7 @@ class CaughtView(ViewSet):
         Returns:
             Response -- JSON serialized game instance
         """
-        #Many-to-Many fields require an empty list in create
+        # Many-to-Many fields require an empty list in create
         user = DexUser.objects.get(user=request.auth.user)
         pokemon = Pokemon.objects.get(pk=request.data['pokemon'])
         try:
@@ -61,6 +62,8 @@ class CaughtView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
+        # user = DexUser.objects.get(user=request.auth.user)
+        # pokemon = Pokemon.objects.get(pk=pk)
         try:
             caught = Caught.objects.get(pk=pk)
             serializer = CreateCaughtSerializer(caught, data=request.data)
@@ -83,4 +86,4 @@ class CaughtSerializer(serializers.ModelSerializer):
 class CreateCaughtSerializer(serializers.ModelSerializer):
     class Meta:
         model = Caught
-        fields = ['id', 'user', 'pokemon', 'is_shiny', 'is_alpha']
+        fields = ['id', 'is_shiny', 'is_alpha']
