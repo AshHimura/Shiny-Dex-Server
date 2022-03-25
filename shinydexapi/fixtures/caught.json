@@ -5,8 +5,8 @@
         "fields": {
             "pokemon_id": 1,
             "user_id": 1,
-            "isShiny": true,
-            "isAlpha": false
+            "is_shiny": true,
+            "is_alpha": false
         }
     }
 ]

@@ -1,7 +1,6 @@
 from django.db import models
 
 class Pokemon(models.Model):
-    # id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)
     pokemon_kind = models.CharField(max_length=40)
     description = models.TextField()
@@ -14,4 +13,4 @@ class Pokemon(models.Model):
     home_regions = models.ManyToManyField("Region", through="RegionPokemon")
     poke_types = models.ManyToManyField("PokeType", through="TypePokemon")
     poke_items = models.ManyToManyField("Item", through="ItemPokemon")
-    
+    poke_img = models.ImageField(upload_to="image", height_field=None, width_field=None, max_length=None, null=True, blank=True)
